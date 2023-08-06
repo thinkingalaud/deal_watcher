@@ -10,9 +10,10 @@ notification_url = environ['NOTIFICATION_URL']
 css = environ['CSS_SELECTOR']
 text = environ['TEXT']
 notify_when_contains = environ['NOTIFY_WHEN_CONTAINS'] == 'true'
+headless = environ['HEADLESS'] == 'true'
 
 with sync_playwright() as p:
-  browser = p.chromium.launch(headless=False)
+  browser = p.chromium.launch(headless=headless)
   page = browser.new_page()
   page.goto(url)
   page.wait_for_selector(css)
