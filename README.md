@@ -5,7 +5,7 @@ Watch webpages for price changes or out of stock changes
 * playwright-python opens a browser and navigates to your URL
 * checks whether the text string does or does not show up in the text of the CSS selector
 * hits the notification URL
-** IFTTT is used and json with a "value1" is provided, but any webhook that accepts a json payload is fine
+  * IFTTT is used and json with a "value1" is provided, but any webhook that accepts a json payload is fine
 
 # Installation
 * install python 3
