@@ -1,5 +1,6 @@
 import requests
 from os import environ
+from datetime import datetime
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 
@@ -24,7 +25,9 @@ with sync_playwright() as p:
       "value1": f"{url} {'contains' if contains else 'does not contain'} {text}",
     }
     requests.post(notification_url, json=data, headers={'Content-Type': 'application/json'})
-    print("sent notification")
+    print(f"{datetime.now()} sent notification")
+  else:
+    print(f"{datetime.now()} condition not satisfied")
 
   browser.close()
 

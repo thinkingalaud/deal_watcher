@@ -17,6 +17,7 @@ NOTIFICATION_URL=<webhook to hit when condition is satisfied>
 CSS_SELECTOR=<css selector for text to watch>
 TEXT=<text to search for>
 NOTIFY_WHEN_CONTAINS=<boolean, true for a notification when the text is present, false for a notification when the text is NOT present>
+HEADLESS=<boolean, some urls need a headful browser to properly load, but takes focus when opening the webpage>
 ```
 * set up `python watch_once.py` to run on a recurring basis (cron, etc)
 
